@@ -1,28 +1,33 @@
 * {margin: 0; padding: 0;
   font-family: 'Pretendard-Regular'
 }
-body {font-family: sans-serif;}
+body {font-family: sans-serif;background-image: url('zxcv.png');}
 li {list-style: none;}
 a {text-decoration: none; color: #a29bfe;}
 img {border: 0;}
-#main_header {
+#header_Warp {
+  background-image: url('asdf.png');background-repeat:no-repeat; 
+  background-size: cover;background-position: center center;}
+#main_header {  
   /* 중앙 정렬 */
   width: 960px; margin: 0 auto;
   /* 절대 좌표 */
-  height: 200px; position: relative;
+  height: 500px; position: relative;
 }
 
 #main_header > #title {
   position: absolute; color: #6c5ce7;
-  left: 20px; top: 40px;
+  left: 20px; top: 220px;
 }
 
 #title > * {font-family: 'DungGeunMo'; 
-  font-size: 40px;letter-spacing:2.5px;}
+  font-size: 48px;letter-spacing:2px;}
+
+#title > h2 {font-size: 30.5px;letter-spacing:2px;}
 
 #main_header > #main_gnb {
   position: absolute;
-  right: 0; top: 10px;
+  right: 0; top: 15px;
 }
 
 #main_header > #main_lnb {
@@ -60,8 +65,8 @@ img {border: 0;}
 #content > #main_aside {width: 200px;float: right;}
 
 #main_section > article.main_article {
-  margin-bottom: 10px;padding: 20px;border: 2px solid #a29bfe;
-  border-radius: 20px;}
+  margin-bottom: 10px;padding: 40px 25px;border: 2px solid #a29bfe;
+  border-radius: 20px;background-color: #fff;}
 .main_article > h1 {
   line-height: 40px;font-size: 30px;color: #6c5ce7; 
   font-family: 'DungGeunMo';letter-spacing:1.5px;}
