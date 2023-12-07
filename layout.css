@@ -1,12 +1,14 @@
+/* https://scroll-driven-animations.style/ */
+
 * {margin: 0; padding: 0;
   font-family: 'Pretendard-Regular'
 }
-body {font-family: sans-serif;background-image: url('zxcv.png');}
+body {font-family: sans-serif;background-image: url('./images/zxcv.png');}
 li {list-style: none;}
 a {text-decoration: none; color: #a29bfe;}
 img {border: 0;}
 #header_Warp {
-  background-image: url('asdf.png');background-repeat:no-repeat; 
+  background-image: url('./images/asdf.png');background-repeat:no-repeat; 
   background-size: cover;background-position: center center;}
 #main_header {  
   width: 1000px; margin: 0 auto;
@@ -21,16 +23,19 @@ img {border: 0;}
 #title > * {font-family: 'DungGeunMo'; 
   font-size: 48px;letter-spacing:2px;}
 
+#title > h1 {display: inline-block;}
+
 #title > h2 {font-size: 30.5px;letter-spacing:2px;}
+
+#blink {
+  animation: blink 1s infinite;
+  font-size: 3rem;
+}
+@keyframes blink {to {opacity: 0;}}
 
 #main_header > #main_gnb {
   position: absolute;
   right: 0; top: 15px;
-}
-
-#main_header > #main_lnb {
-  position: absolute;
-  right: 0; bottom: 10px;
 }
 
 #main_gnb > ul {overflow: hidden;}
@@ -43,6 +48,11 @@ img {border: 0;}
 #main_gnb > ul > li > a:hover {
   background: #6c5ce7;
   color: #ffeaa7;font-weight: bold;
+}
+
+#main_header > #main_lnb {
+  position: absolute;
+  right: 0; bottom: 10px;
 }
 
 #main_lnb > ul {overflow: hidden;}
@@ -65,25 +75,40 @@ img {border: 0;}
 #main_section > article.main_article {
   margin-bottom: 10px;padding: 40px 25px;border: 2px solid #a29bfe;
   border-radius: 20px;background-color: #fff;}
-.main_article > h1 {
+.main_article h1 {
   line-height: 40px;font-size: 35px;color: #6c5ce7; margin-bottom: 10px;
   font-family: 'DungGeunMo';letter-spacing:1.5px;}
 
-.main_article > p{color:#a29bfe;font-weight: bold;font-size: 20px;line-height: 30px;}
+.main_article p{color:#a29bfe;font-weight: bold;font-size: 20px;line-height: 30px;}
 
-input:nth-of-type(1) {display: none;}
-input:nth-of-type(1) ~ div:nth-of-type(1) {display: none;}
-input:nth-of-type(1):checked ~ div:nth-of-type(1) {display: block;}
+#search_wrap{position: relative;}
+#search{
+  box-sizing: border-box;
+  padding:3px;padding-left: 32px;margin:5px 0 10px 0;
+  width: 210px;font-size: 20px;
+  border: 2px solid #a29bfe;}
+#search_wrap .fa-solid {position: absolute;top: 0px;left: 11px;}
 
-input:nth-of-type(2) {display: none;}
-input:nth-of-type(2) ~ div:nth-of-type(2) {display: none;}
-input:nth-of-type(2):checked ~ div:nth-of-type(2) {display: block;}
+#search:hover{border: 2px solid #6c5ce7;}
+#search:focus{outline: 0.5px solid #6c5ce7;}
+
+#side_title{
+  text-align: center;font-size: 30px;margin-top: 10px; margin-bottom: 8px;
+  color:#6c5ce7;font-weight: bold;
+  font-family: 'DungGeunMo';letter-spacing:1.5px;
+}
+
+#content aside input[type=radio]{display: none;}
+#content aside .tab_item{display: none;}
+/* content aside input중 첫번째 타입이 체크 되면 밑에 있는 div 태그중 첫번째의 display 변경 */
+#content aside input:nth-of-type(1):checked ~ div:nth-of-type(1) {display: block;}
+#content aside input:nth-of-type(2):checked ~ div:nth-of-type(2) {display: block;}
 
 section.buttons {overflow: hidden;}
 section.buttons > label {
   display: block; float: left;
   width: 105px;height: 35px; line-height: 33px;text-align: center;
-  box-sizing: border-box;border: 1px solid #a29bfe; color: #a29bfe;
+  box-sizing: border-box;border: 1px solid #a29bfe; color: #a29bfe;background-color: #fff;
 }
 
 section.buttons > label:hover{cursor: pointer;}
@@ -103,6 +128,7 @@ input:nth-of-type(2):checked ~ section.buttons > label:nth-of-type(2) {backgroun
 .tab_item li:last-child {border-radius: 0 0 8px 8px;}
 
 .tumbnail{float: left;}
+.tumbnail img {width: 45px;height: 45px;}
 
 .description{float: left;margin-left: 10px;}
 
@@ -111,9 +137,8 @@ input:nth-of-type(2):checked ~ section.buttons > label:nth-of-type(2) {backgroun
   overflow: hidden;text-overflow: ellipsis;}
 
 #main_footer {
-  width: 1000px;margin: 0 auto; margin-bottom: 10px;
-  box-sizing: border-box;padding: 10px;border: 1px solid black;
-  text-align: center;}
+  margin: 0 auto; background-color: #6c5ce7;
+  padding: 30px;text-align: center;}
 
 @font-face {
   font-family: 'DungGeunMo';
@@ -128,3 +153,23 @@ input:nth-of-type(2):checked ~ section.buttons > label:nth-of-type(2) {backgroun
   font-weight: 400;
   font-style: normal;
   }
+
+html {
+  scroll-timeline: --page-scroll block;
+}
+
+@keyframes grow-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+#progress {
+  position: fixed;
+  left: 0; top: 0;
+  width: 100%; height: 0.7em;
+  background: #6c5ce7;
+
+  transform-origin: 0 50%;
+  animation: grow-progress auto linear;
+  animation-timeline: --page-scroll;
+}

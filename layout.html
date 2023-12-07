@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Web Page</title>
+  <title>ALL ABOUT COMPUTER</title>
   <link rel="stylesheet" href="layout.css" />
+  <script src="https://kit.fontawesome.com/2cb2c6d57e.js" crossorigin="anonymous"></script>
+  <script src="layout.js"></script>
 </head>
 <body>
+  <div id="progress"></div>
   <div id="header_Warp">
   <header id="main_header">
     <div id="title">
-      <h1>ALL ABOUT COMPUTER</h1>
+      <h1 id="titleTxt"></h1><span id="blink">|</span>
       <h2>An Easy to Understand Guide</h2>
     </div>
     <nav id="main_gnb">
@@ -35,19 +38,36 @@
   <div id="content">
     <section id="main_section">
       <article class="main_article">
-        <h1>Main Article</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae voluptatibus harum omnis ullam, quos quibusdam eius reprehenderit saepe repellat modi incidunt, expedita explicabo. Beatae quae placeat fugit sequi nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae voluptatibus harum omnis ullam, quos quibusdam eius reprehenderit saepe repellat modi incidunt, expedita explicabo. Beatae quae placeat fugit sequi nisi.</p>
-      </article>
+        <span class="article_content"  style="--index: 1;">
+          <h1>Main Article</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae voluptatibus harum omnis ullam, quos quibusdam eius reprehenderit saepe repellat modi incidunt, expedita explicabo. Beatae quae placeat fugit sequi nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae voluptatibus harum omnis ullam, quos quibusdam eius reprehenderit saepe repellat modi incidunt, expedita explicabo. Beatae quae placeat fugit sequi nisi.</p>
+        </span>
+        </article>
       <article class="main_article">
-        <h1>Main Article</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae voluptatibus harum omnis ullam, quos quibusdam eius reprehenderit saepe repellat modi incidunt, expedita explicabo. Beatae quae placeat fugit sequi nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae voluptatibus harum omnis ullam, quos quibusdam eius reprehenderit saepe repellat modi incidunt, expedita explicabo. Beatae quae placeat fugit sequi nisi.</p>
-      </article>
+        <span class="article_content" style="--index: 2;">
+          <h1>Main Article</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae voluptatibus harum omnis ullam, quos quibusdam eius reprehenderit saepe repellat modi incidunt, expedita explicabo. Beatae quae placeat fugit sequi nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae voluptatibus harum omnis ullam, quos quibusdam eius reprehenderit saepe repellat modi incidunt, expedita explicabo. Beatae quae placeat fugit sequi nisi.</p>
+        </span>
+        </article>
       <article class="main_article">
-        <h1>Main Article</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-      </article>
+        <span class="article_content" style="--index: 3;">
+          <h1>Main Article</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae voluptatibus harum omnis ullam, quos quibusdam eius reprehenderit saepe repellat modi incidunt, expedita explicabo. Beatae quae placeat fugit sequi nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae voluptatibus harum omnis ullam, quos quibusdam eius reprehenderit saepe repellat modi incidunt, expedita explicabo. Beatae quae placeat fugit sequi nisi.</p>
+        </span>
+        </article>
+      <article class="main_article">
+        <span class="article_content" style="--index: 4;">
+          <h1>Main Article</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae voluptatibus harum omnis ullam, quos quibusdam eius reprehenderit saepe repellat modi incidunt, expedita explicabo. Beatae quae placeat fugit sequi nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae voluptatibus harum omnis ullam, quos quibusdam eius reprehenderit saepe repellat modi incidunt, expedita explicabo. Beatae quae placeat fugit sequi nisi.</p>
+        </span>
+        </article>
     </section>
     <aside id="main_aside">
+      <span id="search_wrap">
+        <input id="search" type="text">
+        <i class="fa-solid fa-magnifying-glass" style="color: #6c5ce7;"></i>
+      </span>
+      <p id="side_title">Recommended<br>Devices</p>
       <input id="first" type="radio" name="tab" checked="checked">
       <input id="second" type="radio" name="tab">
       <section class="buttons">
@@ -59,7 +79,7 @@
           <li class="item">
             <a href="#">
               <div class="tumbnail">
-                <img src="skype.png">
+                <img src="./images/desktop.png">
               </div>
               <div class="description">
                 <strong>HTML5 asdf</strong>
@@ -70,7 +90,7 @@
           <li class="item">
             <a href="#">
               <div class="tumbnail">
-                <img src="http://placehold.it/45x45">
+                <img src="./images/labtop.png">
               </div>
               <div class="description">
                 <strong>HTML5 qwer</strong>
@@ -81,7 +101,7 @@
           <li class="item">
             <a href="#">
               <div class="tumbnail">
-                <img src="http://placehold.it/45x45">
+                <img src="./images/mouse.png">
               </div>
               <div class="description">
                 <strong>HTML5 gfdhj</strong>
@@ -92,7 +112,7 @@
           <li class="item">
             <a href="#">
               <div class="tumbnail">
-                <img src="http://placehold.it/45x45">
+                <img src="./images/keyb.png">
               </div>
               <div class="description">
                 <strong>HTML5 asdf</strong>
@@ -107,7 +127,7 @@
           <li class="item">
             <a href="#">
               <div class="tumbnail">
-                <img src="http://placehold.it/45x45">
+                <img src="./images/speak.png">
               </div>
               <div class="description">
                 <strong>CSS3 asdf</strong>
@@ -118,7 +138,7 @@
           <li class="item">
             <a href="#">
               <div class="tumbnail">
-                <img src="http://placehold.it/45x45">
+                <img src="./images/headp.png">
               </div>
               <div class="description">
                 <strong>CSS3 qwer</strong>
@@ -129,7 +149,7 @@
           <li class="item">
             <a href="#">
               <div class="tumbnail">
-                <img src="http://placehold.it/45x45">
+                <img src="./images/print.png">
               </div>
               <div class="description">
                 <strong>CSS3 gfdhj</strong>
@@ -140,7 +160,7 @@
           <li class="item">
             <a href="#">
               <div class="tumbnail">
-                <img src="http://placehold.it/45x45">
+                <img src="./images/disk.png">
               </div>
               <div class="description">
                 <strong>CSS3 asdf</strong>
@@ -153,8 +173,8 @@
     </aside>
   </div>
   <footer id="main_footer">
-    <h3>HTML5 + asdf</h3>
-    <address>asdfasdfasdf</address>
+    <h3>ALL ABOUT COMPUTER</h3>
+    <address>copyright ©LDH</address>
   </footer>
 </body>
 </html>
