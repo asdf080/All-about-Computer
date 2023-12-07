@@ -15,7 +15,7 @@
       <h1 id="titleTxt"></h1><span id="blink">|</span>
       <h2>An Easy to Understand Guide</h2>
     </div>
-    <nav id="main_gnb">
+    <!-- <nav id="main_gnb">
       <ul>
         <li><a href="#">Web</a></li>
         <li><a href="#">Mobile</a></li>
@@ -23,7 +23,8 @@
         <li><a href="#">Simulation</a></li>
         <li><a href="#">Data</a></li>
       </ul>
-    </nav>
+    </nav> -->
+    <input id="ndBtn" value="NIGHT" type="button" onclick="nightDayHandler(this)">
     <nav id="main_lnb">
       <ul>
         <li><a href="#">HTML5</a></li>
@@ -64,60 +65,55 @@
     </section>
     <aside id="main_aside">
       <span id="search_wrap">
-        <input id="search" type="text">
+        <input id="search" type="text" placeholder="Google Search" onkeydown="searching(event)">
         <i class="fa-solid fa-magnifying-glass" style="color: #6c5ce7;"></i>
       </span>
       <p id="side_title">Recommended<br>Devices</p>
       <input id="first" type="radio" name="tab" checked="checked">
       <input id="second" type="radio" name="tab">
       <section class="buttons">
-        <label id="fst" for="first">HTML</label>
-        <label id="snd" for="second">CSS</label>
+        <label id="fst" for="first">INPUT</label>
+        <label id="snd" for="second">OUTPUT</label>
       </section>
       <div class="tab_item">
         <ul>
           <li class="item">
-            <a href="#">
-              <div class="tumbnail">
-                <img src="./images/desktop.png">
-              </div>
-              <div class="description">
-                <strong>HTML5 asdf</strong>
-                <p>2000-01-01</p>
-              </div>
-            </a>
+            <div class="tumbnail">
+              <img src="./images/mouse.png">
+            </div>
+            <div class="description">
+              <a href="#"><strong>LOGITECH</strong></a>
+              <p>Mouse</p>
+            </div>
+          </li>
+          <li class="item">
+            <div class="tumbnail">
+              <img src="./images/keyb.png">
+            </div>
+            <div class="description">
+              <a href="#"><strong>CORSAIR</strong></a>
+              <p>Keyboards</p>
+            </div>
           </li>
           <li class="item">
             <a href="#">
               <div class="tumbnail">
-                <img src="./images/labtop.png">
+                <img src="./images/mike.png">
               </div>
               <div class="description">
-                <strong>HTML5 qwer</strong>
-                <p>2000-01-01</p>
+                <a href="#"><strong>ELGATO</strong></a>
+                <p>Mike</p>
               </div>
             </a>
           </li>
           <li class="item">
-            <a href="#">
-              <div class="tumbnail">
-                <img src="./images/mouse.png">
-              </div>
-              <div class="description">
-                <strong>HTML5 gfdhj</strong>
-                <p>2000-01-01</p>
-              </div>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#">
-              <div class="tumbnail">
-                <img src="./images/keyb.png">
-              </div>
-              <div class="description">
-                <strong>HTML5 asdf</strong>
-                <p>2000-01-01</p>
-              </div>
+            <div class="tumbnail">
+              <img src="./images/game.png">
+            </div>
+            <div class="description">
+              <a href="#"><strong>XBOX</strong></a>
+              <p>Controller</p>
+            </div>
             </a>
           </li>
         </ul>
@@ -125,48 +121,40 @@
       <div class="tab_item">
         <ul>
           <li class="item">
-            <a href="#">
-              <div class="tumbnail">
-                <img src="./images/speak.png">
-              </div>
-              <div class="description">
-                <strong>CSS3 asdf</strong>
-                <p>2000-01-01</p>
-              </div>
-            </a>
+            <div class="tumbnail">
+              <img src="./images/speak.png">
+            </div>
+            <div class="description">
+              <a href="#"><strong>JBL</strong></a>
+              <p>Speaker</p>
+            </div>
           </li>
           <li class="item">
-            <a href="#">
-              <div class="tumbnail">
-                <img src="./images/headp.png">
-              </div>
-              <div class="description">
-                <strong>CSS3 qwer</strong>
-                <p>2000-01-01</p>
-              </div>
-            </a>
+            <div class="tumbnail">
+              <img src="./images/headp.png">
+            </div>
+            <div class="description">
+              <a href="#"><strong>Bose</strong></a>
+              <p>Headphone</p>
+            </div>
           </li>
           <li class="item">
-            <a href="#">
-              <div class="tumbnail">
-                <img src="./images/print.png">
-              </div>
-              <div class="description">
-                <strong>CSS3 gfdhj</strong>
-                <p>2000-01-01</p>
-              </div>
-            </a>
+            <div class="tumbnail">
+              <img src="./images/moni.png">
+            </div>
+            <div class="description">
+              <a href="#"><strong>LG</strong></a>
+              <p>Moniter</p>
+            </div>
           </li>
           <li class="item">
-            <a href="#">
-              <div class="tumbnail">
-                <img src="./images/disk.png">
-              </div>
-              <div class="description">
-                <strong>CSS3 asdf</strong>
-                <p>2000-01-01</p>
-              </div>
-            </a>
+            <div class="tumbnail">
+              <img src="./images/print.png">
+            </div>
+            <div class="description">
+              <a href="#"><strong>Epson</strong></a>
+              <p>Printer</p>
+            </div>
           </li>
         </ul>
       </div>
@@ -174,7 +162,7 @@
   </div>
   <footer id="main_footer">
     <h3>ALL ABOUT COMPUTER</h3>
-    <address>copyright ©LDH</address>
+    <address>08-log.tistory.com</address>
   </footer>
 </body>
 </html>
