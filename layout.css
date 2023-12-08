@@ -1,11 +1,11 @@
 /* https://scroll-driven-animations.style/ */
 
 * {margin: 0; padding: 0;
-  font-family: 'Pretendard-Regular'
+  font-family: 'Pretendard-Regular';color:#a29bfe
 }
 body {font-family: sans-serif;background-image: url('./images/zxcv.png');}
 li {list-style: none;}
-a {text-decoration: none; color: #a29bfe;}
+a {text-decoration: none;}
 img {border: 0;}
 #header_Warp {
   background-image: url('./images/asdf.png');background-repeat:no-repeat; 
@@ -16,11 +16,11 @@ img {border: 0;}
 }
 
 #main_header > #title {
-  position: absolute; color: #5b4ed7;
+  position: absolute;
   left: 33px; top: 220px;
 }
 
-#title > * {font-family: 'DungGeunMo'; 
+#title > * {font-family: 'DungGeunMo'; color: #5b4ed7;
   font-size: 48px;letter-spacing:2px;}
 
 #title > h1 {display: inline-block;}
@@ -32,28 +32,6 @@ img {border: 0;}
   font-size: 3rem;
 }
 @keyframes blink {to {opacity: 0;}}
-
-/* #main_header > #main_gnb {
-  position: absolute;
-  right: 0; top: 15px;
-} */
-
-/* #main_gnb > ul {overflow: hidden;}
-#main_gnb > ul > li {float: left;}
-#main_gnb > ul > li > a {
-  display: block;
-  padding: 2px 10px;
-  border-bottom: 2px solid #a29bfe;font-weight: bold;
-}
-#main_gnb > ul > li > a:hover {
-  background: #5b4ed7;
-  color: #ffeaa7;font-weight: bold;
-} */
-
-#ndBtn{
-  width: 55px;height: 30px;
-  position: absolute;right: 0px;top: 10px;
-}
 
 #main_header > #main_lnb {
   position: absolute;
@@ -84,7 +62,7 @@ img {border: 0;}
   line-height: 40px;font-size: 35px;color: #5b4ed7; margin-bottom: 10px;
   font-family: 'DungGeunMo';letter-spacing:1.5px;}
 
-.main_article p{color:#a29bfe;font-weight: bold;font-size: 20px;line-height: 30px;}
+.main_article p{font-weight: bold;font-size: 20px;line-height: 30px;}
 
 #search_wrap{position: relative;}
 #search{
@@ -105,14 +83,14 @@ img {border: 0;}
 
 #content aside input[type=radio]{display: none;}
 #content aside .tab_item{display: none;}
-/* content aside input중 첫번째 타입이 체크 되면 밑에 있는 div 태그중 첫번째의 display 변경 */
+
 #content aside input:nth-of-type(1):checked ~ div:nth-of-type(1) {display: block;}
 #content aside input:nth-of-type(2):checked ~ div:nth-of-type(2) {display: block;}
 
 section.buttons {overflow: hidden;}
 section.buttons > label {
   display: block; float: left;
-  width: 105px;height: 35px; line-height: 33px;text-align: center;
+  width: 105px;height: 40px; line-height: 37px;text-align: center;font-size: 18px;
   box-sizing: border-box;border: 1px solid #a29bfe; color: #a29bfe;background-color: #fff;
 }
 
@@ -126,7 +104,7 @@ input:nth-of-type(2):checked ~ section.buttons > label:nth-of-type(2) {backgroun
 
 .item{
   overflow: hidden;padding: 10px;
-  border: 1px solid #a29bfe;
+  border: 1px solid #a29bfe;font-size: 17px;
   border-top: none;background-color: #fff;
 }
 
@@ -142,7 +120,7 @@ input:nth-of-type(2):checked ~ section.buttons > label:nth-of-type(2) {backgroun
 .description strong {
   display: block; width: 120px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;}
 
-.description p {color:#a29bfe;display: block; width: 120px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;}
+.description p {display: block; width: 120px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;}
 
 #main_footer {
   margin: 0 auto; background-color: #5b4ed7;
@@ -183,3 +161,170 @@ html {
   animation: grow-progress auto linear;
   animation-timeline: --page-scroll;
 }
+
+
+/*야간모드 버튼*/
+#btnWrap{position: absolute;right: 35px;top:10px;}
+.toggle--label:hover{cursor: pointer;}
+
+:root {
+  /** sunny side **/
+  --blue-border: #2893fd;
+  --blue-color: #74b9ff;
+  --yellow-background: #fdcb6e;
+  --yellow-border: #ffedcd;
+  /** dark side **/
+  --indigo-border: #5d6baa;
+  --indigo-color: #a29bfe;
+  --gray-border: #e8e8ea;
+  --gray-dots: #e8e8ea;
+  /** general **/
+  --white: #fff;
+}
+
+.toggle--checkbox {
+  display: none;
+}
+
+.toggle--checkbox:checked + .toggle--label {
+  background: var(--indigo-color);
+  border-color: var(--indigo-border);
+  /** Change the cloud to stars **/
+  /** Change the sun into the moon **/
+  /** Show the dimples on the moon **/
+}
+.toggle--checkbox:checked + .toggle--label .toggle--label-background {
+  left: 30px;
+  width: 2.5px;
+}
+.toggle--checkbox:checked + .toggle--label .toggle--label-background:before {
+  width: 2.5px;
+  height: 2.5px;
+  top: -12.5px;
+}
+.toggle--checkbox:checked + .toggle--label .toggle--label-background:after {
+  width: 2.5px;
+  height: 2.5px;
+  left: -15px;
+  top: 10px;
+}
+.toggle--checkbox:checked + .toggle--label:before {
+  background: var(--white);
+  border-color: var(--gray-border);
+  animation-name: switch;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+}
+.toggle--checkbox:checked + .toggle--label:after {
+  transition-delay: 350ms;
+  opacity: 1;
+}
+.toggle--label {
+  /** Placeholder element, starting at blue **/
+  width: 100px;
+  height: 50px;
+  background: var(--blue-color);
+  border-radius: 50px;
+  border: 2.5px solid var(--blue-border);
+  display: flex;
+  position: relative;
+  transition: all 350ms ease-in;
+  /** The sun cloud and moon stars **/
+  /** Sun/Moon element **/
+  /** Gray dots on the moon **/
+}
+.toggle--label-background {
+  width: 5px;
+  height: 2.5px;
+  border-radius: 2.5px;
+  position: relative;
+  background: var(--white);
+  left: 67.5px;
+  top: 22.5px;
+  transition: all 150ms ease-in;
+}
+.toggle--label-background:before {
+  content: "";
+  position: absolute;
+  top: -2.5px;
+  width: 20px;
+  height: 2.5px;
+  border-radius: 2.5px;
+  background: var(--white);
+  left: -10px;
+  transition: all 150ms ease-in;
+}
+.toggle--label-background:after {
+  content: "";
+  position: absolute;
+  top: 2.5px;
+  width: 20px;
+  height: 2.5px;
+  border-radius: 2.5px;
+  background: var(--white);
+  left: -5px;
+  transition: all 150ms ease-in;
+}
+.toggle--label:before {
+  animation-name: reverse;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  transition: all 350ms ease-in;
+  content: "";
+  width: 41px;
+  height: 41px;
+  border: 2.5px solid var(--yellow-border);
+  top: 2.5px;
+  left: 2.5px;
+  position: absolute;
+  border-radius: 41px;
+  background: var(--yellow-background);
+}
+.toggle--label:after {
+  transition-delay: 0ms;
+  transition: all 250ms ease-in;
+  position: absolute;
+  content: "";
+  box-shadow: var(--gray-dots) -6.5px 0 0 1.25px, var(--gray-dots) -12px 7px 0 -1.25px;
+  left: 71.5px;
+  top: 11.5px;
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+@keyframes switch {
+  0% {
+    left: 2.5px;
+  }
+  60% {
+    left: 2.5px;
+    width: 56px;
+  }
+  100% {
+    left: 52px;
+    width: 41px;
+  }
+}
+@keyframes reverse {
+  0% {
+    left: 52px;
+    width: 41px;
+  }
+  60% {
+    left: 36.5px;
+    width: 56px;
+  }
+  100% {
+    left: 2.5px;
+  }
+}
+
+/*맨 위로 버튼 속성 설정*/
+#goto-top {
+  position: fixed;right: 10px;bottom: 20px;width: 50px;height: 50px;
+  border: 2px solid #5b4ed7;background-color: #fff;border-radius: 50%;}
+
+#goto-top img {width: 35px;margin: 11px 0px 0px 7px;}
