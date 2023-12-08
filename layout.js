@@ -16,6 +16,23 @@ function add(){
 
 let intv = setInterval(add, 200);
 
+// 제목 타이핑 버튼
+
+function startIntv() {
+  if (!intv) {
+    intv = setInterval(add, 200);
+  }
+}
+
+function stopIntv() {
+  if (intv) {
+    clearInterval(intv);
+    intv = undefined; // 인터벌 ID 초기화
+  }
+}
+document.querySelector('#start').addEventListener('click', startIntv);
+document.querySelector('#stop').addEventListener('click', stopIntv);
+
 // 검색창
 function searching(event) {
   if (event.key === "Enter") {

@@ -17,7 +17,7 @@ img {border: 0;}
 
 #main_header > #title {
   position: absolute;
-  left: 33px; top: 220px;
+  left: 33px; top: 215px;
 }
 
 #title > * {font-family: 'DungGeunMo'; color: #5b4ed7;
@@ -32,6 +32,17 @@ img {border: 0;}
   font-size: 3rem;
 }
 @keyframes blink {to {opacity: 0;}}
+
+#main_header button{
+  border: none; background-color: rgba(0,0,0,0);
+  position: absolute;top:310px;left:235px;
+}
+
+#main_header button:hover{
+  cursor: url('./images/cur2.png'), auto;
+}
+
+#main_header #stop{left:275px;}
 
 #main_header > #main_lnb {
   position: absolute;
