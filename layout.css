@@ -334,7 +334,6 @@ html {
   }
 }
 
-/*맨 위로 버튼 속성 설정*/
 #goto-top {
   position: fixed;right: 10px;bottom: 20px;width: 50px;height: 50px;
   border: 2px solid #5b4ed7;background-color: #fff;border-radius: 50%;}
