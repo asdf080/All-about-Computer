@@ -12,3 +12,7 @@
 - HTML
 - CSS
 - JavaScript
+
+### ✔ 미리보기
+![preview](./images/preview.png)
+![preview](./images/preview2.png)
