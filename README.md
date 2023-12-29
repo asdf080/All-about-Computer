@@ -15,6 +15,10 @@ https://asdf080.github.io/All-about-Computer/
 - CSS
 - JavaScript
 
+### 🎈주요 기능
+- 다크 모드/라이트 모드 토글 버튼
+- JS 함수를 이용한 자동 타이핑 타이틀과 타이핑 일시정지/재생 버튼
+
 ### ✔ 미리보기
 ![preview](./images/preview.png)
 ![preview](./images/preview2.png)
